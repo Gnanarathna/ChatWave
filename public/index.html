@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatWave</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="auth-area">
+  <input id="emailInput" type="email" placeholder="Email" /><br><br>
+  <input id="passwordInput" type="password" placeholder="Password" /><br><br>
+  <div class="button-row">   
+    <button onclick="signIn()">Sign In</button>
+    <button onclick="signUp()">Sign Up</button>
+  </div>
+</div>
+
+
+  <div id="username-area" style="display:none;">
+    <input id="usernameInput" placeholder="Enter username" /><br><br>
+    <button onclick="setUsername()">Set Username</button>
+  </div>
+
+  <div id="chat-container" style="display:none; flex-direction: column;">
+    <div id="chat-box" style="height: 200px; overflow-y: scroll;"></div>
+    <div id="message-area">
+  <input id="messageInput" placeholder="Type a message..." />
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+</div>
+  
+  <button id="theme-toggle">Toggle Light/Dark</button>
+  <button id="signout-btn" onclick="signOut()">Sign Out</button>
+  <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
